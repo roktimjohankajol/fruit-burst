@@ -7,6 +7,6 @@
     padding: 16px 40px;
     border-radius: 10px;
 }
-.bg-overlay::before{
-    
+.box-shadow{
+    box-shadow: 0px 8px 60px 0px rgba(0, 0, 0, 0.05); 
 }
