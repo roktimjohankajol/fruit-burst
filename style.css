@@ -1,3 +1,12 @@
 .container{
     max-width: 1200px !important;
 }
+.btn-theme{
+    background-color: #F85559;
+    color: #fff;
+    padding: 16px 40px;
+    border-radius: 10px;
+}
+.bg-overlay::before{
+    
+}
