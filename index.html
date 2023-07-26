@@ -10,19 +10,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
 
+      <!-- Font Awesome CDN  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
       <!-- Custom CSS Code  -->
       <link rel="stylesheet" href="style.css">
 
     <!-- Tailwind CSS config -->
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
   </head>
-  <body>
+  <body class="p-5 lg:p-0">
 
     <header>
       <div class="container mx-auto">
         <!-- Main navigation container -->
         <nav
-        class="relative flex w-full mt-5 flex-nowrap items-center justify-between bg-[#F85559] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#F85559] lg:flex-wrap lg:justify-start lg:py-4 lg:rounded-full"
+        class="relative flex w-full mt-5  flex-nowrap items-center justify-between bg-[#F85559] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#F85559] lg:flex-wrap lg:justify-start lg:py-4 rounded-full"
         data-te-navbar-ref>
         <div class="flex w-full flex-wrap items-center justify-between px-3">
 
@@ -211,9 +214,9 @@
                 data-te-carousel-active
                 data-te-carousel-item
                 style="backface-visibility: hidden">
-                <div class="w-full h-[32rem] rounded-lg overflow-hidden relative">
-                  <img class="absolute inset-0 h-full w-full object-cover" src="images/banner1.png" alt="" />
-                  <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+                <div class="w-full h-[28rem] lg:h-[32rem] rounded-lg overflow-hidden relative">
+                  <img class="absolute inset-0 h-full w-full object-cover" src="images/banner2.png" alt="" />
+                  <div class="absolute inset-0 bg-overlay"></div>
                   <div class="flex h-96 items-center justify-center relative">
                     <div class="absolute lg:inset-x-[15%] top-20 py-5 px-12 text-center text-white md:block space-y-5">
                       <h2 class="text-white text-4xl lg:text-6xl font-bold">Exotic tastes at your<br> doorstep</h2>
@@ -228,9 +231,9 @@
                 class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                 data-te-carousel-item
                 style="backface-visibility: hidden">
-                <div class="w-full h-[32rem] rounded-lg overflow-hidden relative">
-                  <img class="absolute inset-0 h-full w-full object-cover" src="images/banner2.png" alt="" />
-                  <div class="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
+                <div class="w-full h-[28rem] lg:h-[32rem] rounded-lg overflow-hidden relative">
+                  <img class="absolute inset-0 h-full w-full object-cover" src="images/banner1.png" alt="" />
+                  <div class="absolute inset-0 bg-overlay"></div>
                   <div class="flex h-96 items-center justify-center relative">
                     <div class="absolute lg:inset-x-[15%] top-20 py-5 px-12 text-center text-white md:block space-y-5">
                       <h2 class="text-white text-4xl lg:text-6xl font-bold">Exotic tastes at your<br> doorstep</h2>
@@ -245,9 +248,9 @@
                 class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                 data-te-carousel-item
                 style="backface-visibility: hidden">
-                <div class="w-full h-[32rem] rounded-lg overflow-hidden relative">
+                <div class="w-full h-[28rem] lg:h-[32rem] rounded-lg overflow-hidden relative">
                   <img class="absolute inset-0 h-full w-full object-cover" src="images/banner3.png" alt="" />
-                  <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+                  <div class="absolute inset-0 bg-overlay"></div>
                   <div class="flex h-96 items-center justify-center relative">
                     <div class="absolute lg:inset-x-[15%] top-20 py-5 px-12 text-center text-white md:block space-y-5">
                       <h2 class="text-white text-4xl lg:text-6xl font-bold">Exotic tastes at your<br> doorstep</h2>
@@ -262,9 +265,9 @@
                 class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
                 data-te-carousel-item
                 style="backface-visibility: hidden">
-                <div class="w-full h-[32rem] rounded-lg overflow-hidden relative">
+                <div class="w-full h-[28rem] lg:h-[32rem] rounded-lg overflow-hidden relative">
                   <img class="absolute inset-0 h-full w-full object-cover" src="images/banner4.png" alt="" />
-                  <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+                  <div class="absolute inset-0 bg-overlay"></div>
                   <div class="flex h-96 items-center justify-center relative">
                     <div class="absolute lg:inset-x-[15%] top-20 py-5 px-12 text-center text-white md:block space-y-5">
                       <h2 class="text-white text-4xl lg:text-6xl font-bold">Exotic tastes at your<br> doorstep</h2>
@@ -331,7 +334,7 @@
           </div>
         </section>
 
-        <section class="banner-bottom-bar mb-40">
+        <section class="banner-bottom-bar mb-40 mobile-hidden">
           <div class="container mx-auto">
            <div class="relative">
             <div class="flex gap-5 justify-around text-center -mt-20 bg-white p-5 mx-12 rounded-lg box-shadow">
@@ -360,7 +363,390 @@
           </div>
         </section>
 
+        <!-- Deal Section  -->
+        <section class="deal py-12 lg:py-0">
+          <div class="container mx-auto">
+            <div class="top-deal grid lg:grid-cols-2 grid-cols-1 gap-5">
+              <div class="left-side space-y-5">
+                <h2 class="text-black text-5xl font-bold">Deal of the day</h2>
+                <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+              </div>
+              <div class="right-side">
+                <div class="count-down flex gap-5 lg:justify-end justify-start items-center text-center">
+                  <div>
+                    <h2 class="text-black text-4xl font-bold">29</h2>
+                    <p>Day</p>
+                  </div>
+                  <div>:</div>
+                  <div>
+                    <h2 class="text-black text-4xl font-bold">15</h2>
+                    <p>Hours</p>
+                  </div>
+                  <div>:</div>
+                  <div>
+                    <h2 class="text-black text-4xl font-bold">25</h2>
+                    <p>Minutes</p>
+                  </div>
+                  <div>:</div>
+                  <div>
+                    <h2 class="text-black text-4xl font-bold">08</h2>
+                    <p>Second</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <!-- Card Section  -->
+
+            <div class="deal-card py-20">
+              <div class="grid lg:grid-cols-4 gap-6 grid-cols-1">
+
+                <!-- Card 1 -->
+
+                <div class="card text-center space-y-4 border border-gray-200 p-10 rounded-lg">
+                  <img class="inline-block" src="images/fruit6.png" alt="">
+                  <h2 class="font-bold text-black">12.90$ - 18.85$</h2>
+                  <hr>
+                  <a class="block" href="#">Apples</a>
+                  <img class="block mx-auto" src="images/Group 24.png" alt="">
+
+                  <!-- Modal Details  -->
+
+                  <!-- Button trigger modal -->
+                  <button
+                  type="button"
+                  class="inline-block rounded text-[#F85559] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal focus:outline-none "
+                  data-te-toggle="modal"
+                  data-te-target="#exampleModalScrollable"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  Details
+                  </button>
+
+                  <!-- Modal -->
+                    <div
+                    data-te-modal-init
+                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                    id="exampleModalScrollable"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalScrollableLabel"
+                    aria-hidden="true">
+                    <div
+                      data-te-modal-dialog-ref
+                      class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                      <div
+                        class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none">
+                        
+                        <!--Modal body-->
+                        <div class="relative overflow-y-auto p-12 space-y-4">
+                          <img class="inline-block" src="images/fruit6.png" alt="">
+                          <h2 class="font-bold">12.90$ - 18.85$</h2>
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                          <a class="block" href="#">Apples</a>
+                          <img class="block mx-auto" src="images/Group 24.png" alt="">
+                        </div>
+
+                        <!--Modal footer-->
+                        <div
+                          class="flex flex-shrink-0 flex-wrap items-center gap-5 justify-center rounded-b-md -mt-6 pb-16 dark:border-opacity-50">
+                          <button
+                            type="button"
+                            class="text-[#F85559] border border-[#F85559] py-4 px-6 rounded-lg"
+                            data-te-modal-dismiss
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn text-white bg-[#F85559] rounded-md py-4 px-6"
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Buy Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+
+                <div class="card text-center space-y-4 border border-gray-200 p-10 rounded-lg">
+                  <img class="inline-block" src="images/fruit7.png" alt="">
+                  <h2 class="font-bold text-black">12.90$ - 18.85$</h2>
+                  <hr>
+                  <a class="block" href="#">Orange</a>
+                  <img class="block mx-auto" src="images/Group 24.png" alt="">
+
+                  <!-- Modal Details  -->
+
+                  <!-- Button trigger modal -->
+                  <button
+                  type="button"
+                  class="inline-block rounded text-[#F85559] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal focus:outline-none "
+                  data-te-toggle="modal"
+                  data-te-target="#exampleModalScrollable2"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  Details
+                  </button>
+
+                  <!-- Modal -->
+                    <div
+                    data-te-modal-init
+                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                    id="exampleModalScrollable2"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalScrollableLabel"
+                    aria-hidden="true">
+                    <div
+                      data-te-modal-dialog-ref
+                      class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                      <div
+                        class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none">
+                        
+                        <!--Modal body-->
+                        <div class="relative overflow-y-auto p-12 space-y-4">
+                          <img class="inline-block" src="images/fruit7.png" alt="">
+                          <h2 class="font-bold">12.90$ - 18.85$</h2>
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                          <a class="block" href="#">Orange</a>
+                          <img class="block mx-auto" src="images/Group 24.png" alt="">
+                        </div>
+
+                        <!--Modal footer-->
+                        <div
+                          class="flex flex-shrink-0 flex-wrap items-center gap-5 justify-center rounded-b-md -mt-6 pb-16 dark:border-opacity-50">
+                          <button
+                            type="button"
+                            class="text-[#F85559] border border-[#F85559] py-4 px-6 rounded-lg"
+                            data-te-modal-dismiss
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn text-white bg-[#F85559] rounded-md py-4 px-6"
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Buy Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+
+                <div class="card text-center space-y-4 border border-gray-200 p-10 rounded-lg">
+                  <img class="inline-block" src="images/fruit8.png" alt="">
+                  <h2 class="font-bold text-black">12.90$ - 18.85$</h2>
+                  <hr>
+                  <a class="block" href="#">Red Dragon</a>
+                  <img class="block mx-auto" src="images/Group 24.png" alt="">
+
+                  <!-- Modal Details  -->
+
+                  <!-- Button trigger modal -->
+                  <button
+                  type="button"
+                  class="inline-block rounded text-[#F85559] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal focus:outline-none "
+                  data-te-toggle="modal"
+                  data-te-target="#exampleModalScrollable3"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  Details
+                  </button>
+
+                  <!-- Modal -->
+                    <div
+                    data-te-modal-init
+                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                    id="exampleModalScrollable3"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalScrollableLabel"
+                    aria-hidden="true">
+                    <div
+                      data-te-modal-dialog-ref
+                      class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                      <div
+                        class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none">
+                        
+                        <!--Modal body-->
+                        <div class="relative overflow-y-auto p-12 space-y-4">
+                          <img class="inline-block" src="images/fruit8.png" alt="">
+                          <h2 class="font-bold">12.90$ - 18.85$</h2>
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                          <a class="block" href="#">Red Dragon</a>
+                          <img class="block mx-auto" src="images/Group 24.png" alt="">
+                        </div>
+
+                        <!--Modal footer-->
+                        <div
+                          class="flex flex-shrink-0 flex-wrap items-center gap-5 justify-center rounded-b-md -mt-6 pb-16 dark:border-opacity-50">
+                          <button
+                            type="button"
+                            class="text-[#F85559] border border-[#F85559] py-4 px-6 rounded-lg"
+                            data-te-modal-dismiss
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn text-white bg-[#F85559] rounded-md py-4 px-6"
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Buy Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+
+                <div class="card text-center space-y-4 border border-gray-200 p-10 rounded-lg">
+                  <img class="inline-block" src="images/fruit9.png" alt="">
+                  <h2 class="font-bold text-black">12.90$ - 18.85$</h2>
+                  <hr>
+                  <a class="block" href="#">Banana</a>
+                  <img class="block mx-auto" src="images/Group 24.png" alt="">
+
+                  <!-- Modal Details  -->
+
+                  <!-- Button trigger modal -->
+                  <button
+                  type="button"
+                  class="inline-block rounded text-[#F85559] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal focus:outline-none "
+                  data-te-toggle="modal"
+                  data-te-target="#exampleModalScrollable4"
+                  data-te-ripple-init
+                  data-te-ripple-color="light">
+                  Details
+                  </button>
+
+                  <!-- Modal -->
+                    <div
+                    data-te-modal-init
+                    class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
+                    id="exampleModalScrollable4"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalScrollableLabel"
+                    aria-hidden="true">
+                    <div
+                      data-te-modal-dialog-ref
+                      class="pointer-events-none relative h-[calc(100%-1rem)] w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+                      <div
+                        class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none">
+                        
+                        <!--Modal body-->
+                        <div class="relative overflow-y-auto p-12 space-y-4">
+                          <img class="inline-block" src="images/fruit9.png" alt="">
+                          <h2 class="font-bold">12.90$ - 18.85$</h2>
+                          <p>Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                          <a class="block" href="#">Banana</a>
+                          <img class="block mx-auto" src="images/Group 24.png" alt="">
+                        </div>
+
+                        <!--Modal footer-->
+                        <div
+                          class="flex flex-shrink-0 flex-wrap items-center gap-5 justify-center rounded-b-md -mt-6 pb-16 dark:border-opacity-50">
+                          <button
+                            type="button"
+                            class="text-[#F85559] border border-[#F85559] py-4 px-6 rounded-lg"
+                            data-te-modal-dismiss
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn text-white bg-[#F85559] rounded-md py-4 px-6"
+                            data-te-ripple-init
+                            data-te-ripple-color="light">
+                            Buy Now
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+              </div>
+              <button class="btn btn-theme mx-auto block mt-12">Shop All</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="team py-16">
+          <div class="container mx-auto">
+            <div class="w-full h-[96rem] lg:h-[40rem] rounded-lg overflow-hidden relative">
+              <img class="absolute inset-0 h-full w-full object-cover" src="images/banner1.png" alt="" />
+              <div class="absolute inset-0 bg-gray-900 opacity-70"></div>
+              <div class="flex h-96 items-center justify-center relative">
+                <div class="absolute lg:inset-x-[15%] top-12 lg:top-16 py-5 text-center text-white md:block space-y-5 px-8">
+                  <h2 class="text-white text-4xl lg:text-6xl font-bold">Meet the team section</h2>
+                  <p>Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                  
+                  <!-- Team user  -->
+
+                  <div class="grid lg:grid-cols-4 grid-cols-1 gap-12 py-12">
+                    <!-- Team 1 -->
+                    <div class="team">
+                      <img class="inline-block" src="images/member1.png" alt="">
+                      <h3 class="text-xl mt-5">Awlad Hossain</h3>
+                      <p class="py-1">Fruits Expert</p>
+                      <div class="social-icon mt-3 flex justify-center gap-3">
+                        <a href="#"><i class="fa-brands fa-facebook bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin bg-[#F85559] p-1 rounded-full"></i></a>
+                      </div>
+                    </div>
+                    <!-- Team 2 -->
+                    <div class="team">
+                      <img class="inline-block" src="images/member2.png" alt="">
+                      <h3 class="text-xl mt-5">Safia Chowdhury</h3>
+                      <p class="py-1">Fruits Expert</p>
+                      <div class="social-icon mt-3 flex justify-center gap-3">
+                        <a href="#"><i class="fa-brands fa-facebook bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin bg-[#F85559] p-1 rounded-full"></i></a>
+                      </div>
+                    </div>
+                    <!-- Team 3 -->
+                    <div class="team">
+                      <img class="inline-block" src="images/member3.png" alt="">
+                      <h3 class="text-xl mt-5">Rokib Hossain</h3>
+                      <p class="py-1">Fruits Expert</p>
+                      <div class="social-icon mt-3 flex justify-center gap-3">
+                        <a href="#"><i class="fa-brands fa-facebook bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin bg-[#F85559] p-1 rounded-full"></i></a>
+                      </div>
+                    </div>
+                    <!-- Team 4 -->
+                    <div class="team">
+                      <img class="inline-block" src="images/member4.png" alt="">
+                      <h3 class="text-xl mt-5">Chaity</h3>
+                      <p class="py-1">Fruits Expert</p>
+                      <div class="social-icon mt-3 flex justify-center gap-3">
+                        <a href="#"><i class="fa-brands fa-facebook bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin bg-[#F85559] p-1 rounded-full"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        
     </main>
 
     <!-- Tailwind Elements JavaScript -->

@@ -10,3 +10,12 @@
 .box-shadow{
     box-shadow: 0px 8px 60px 0px rgba(0, 0, 0, 0.05); 
 }
+.bg-overlay{
+    background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%); 
+}
+
+@media screen and ( max-width: 600px ) {
+    .mobile-hidden{
+        display: none;
+    }
+}
