@@ -4,42 +4,166 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Elements Quick Start</title>
-
-    <!-- Roboto font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
-      rel="stylesheet" />
-
+    <title>Fruit Burst</title>
     <!-- Tailwind Elements styles-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
 
+      <!-- Custom CSS Code  -->
+      <link rel="stylesheet" href="style.css">
+
     <!-- Tailwind CSS config -->
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          fontFamily: {
-            sans: ["Roboto", "sans-serif"],
-            body: ["Roboto", "sans-serif"],
-            mono: ["ui-monospace", "monospace"],
-          },
-        },
-        corePlugins: {
-          preflight: false,
-        },
-      };
-    </script>
   </head>
-
   <body>
 
+    <header>
+      <div class="container mx-auto">
+        <!-- Main navigation container -->
+        <nav
+        class="relative flex w-full mt-5 flex-nowrap items-center justify-between bg-[#F85559] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#F85559] lg:flex-wrap lg:justify-start lg:py-4 lg:rounded-full"
+        data-te-navbar-ref>
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+
+          <!-- Mobile Menu  -->
+          <div class="flex w-full justify-between items-center">
+            <!-- Logo  -->
+            <div>
+              <a href="#" class="flex items-center gap-3 lg:hidden">
+                <img src="images/logo.png" alt="">
+              <h2 class="text-white text-2xl font-bold">Fruit Burst</h2>
+              </a>
+            </div>
+            <div>
+              <!-- Hamburger button for mobile view -->
+          
+                <button
+                class="bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                type="button"
+                data-te-collapse-init
+                data-te-target="#navbarSupportedContent13"
+                aria-controls="navbarSupportedContent13"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- Hamburger icon -->
+                <div>
+                  <span class="[&>svg]:w-7">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="h-7 w-7">
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </div>
+
+              </button>
+            </div>
+
+          </div>
+          <!-- Collapsible navbar container -->
+          <div
+            class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto w-full flex-wrap justify-between px-3"
+            id="navbarSupportedContent13"
+            data-te-collapse-item>
+            <!-- Left links -->
+            <div>
+              <ul
+              class="list-style-none mr-auto flex flex-col pl-0 lg:mt-1 lg:flex-row"
+              data-te-navbar-nav-ref>
+              <!-- Home link -->
+              <li
+                class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                data-te-nav-item-ref>
+                <a
+                  class="p-0 text-white transition duration-200 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  aria-current="page"
+                  href="#"
+                  data-te-nav-link-ref
+                  >Home</a
+                >
+              </li>
+              <li
+                class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
+                data-te-nav-item-ref>
+                <a
+                  class="p-0 text-white transition duration-200 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  aria-current="page"
+                  href="#"
+                  data-te-nav-link-ref
+                  >About Us</a
+                >
+              </li>
+              <!-- Link -->
+              <li
+                class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+                data-te-nav-item-ref>
+                <a
+                  class="p-0 text-white transition duration-200 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="#"
+                  data-te-nav-link-ref
+                  >Shop</a
+                >
+              </li>
+              <li
+                class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
+                data-te-nav-item-ref>
+                <a
+                  class="p-0 text-white transition duration-200 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+                  href="#"
+                  data-te-nav-link-ref
+                  >All Fruits</a
+                >
+              </li>
+            </ul>
+            </div>
+            <!-- Logo Area  -->
+            <div>
+              <a href="#" class="flex items-center gap-3 py-5 lg:p-0">
+                <img src="images/logo.png" alt="">
+              <h2 class="text-white text-2xl font-bold">Fruit Burst</h2>
+              </a>
+            </div>
 
 
-    
+            <!--Search button-->
+
+            <div class="w-[300px] lg:pr-2">
+              <div class="relative flex w-full flex-wrap items-stretch">
+                <input
+                  type="search"
+                  class="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-full bg-white bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none motion-reduce:transition-none dark:border-neutral-500 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="button-addon3" />
+
+                <button
+                  class="relative z-[2] rounded-full px-6 py-2 -ml-16 z-30 text-xs font-medium uppercase text-primary transition duration-150 ease-in-out focus:outline-none focus:ring-0 motion-reduce:transition-none text-black"
+                  type="button"
+                  id="button-addon3"
+                  data-te-ripple-init>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                  </svg>
+                  
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </nav>
+      </div>
+    </header>
+   
+    <main>
+      
+    </main>
+
     <!-- Tailwind Elements JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
   </body>
